@@ -1,0 +1,38 @@
+{
+  "name": "electron-server",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "dependencies": {
+    "egg": "^3.31.0",
+    "express": "^5.1.0",
+    "mqtt": "^5.14.1",
+    "printer": "^0.4.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12",
+    "electron": "^28.3.3"
+  },
+  "build": {
+    "appId": "com.wqs.print",
+    "productName": "WQS Print Client",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "server.js",
+      "printer.js",
+      "node_modules/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.wqs.print
+productName: WQS Print Client
+files:
+  - filter:
+      - main.js
+      - server.js
+      - printer.js
+      - node_modules/**
+      - package.json
+win:
+  target: nsis
+  icon: icon.ico
+electronVersion: 28.3.3
